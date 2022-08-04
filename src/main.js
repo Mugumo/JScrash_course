@@ -21,3 +21,7 @@ console.log(s.toUpperCase());
 console.log(s.toLowerCase());
 console.log(s.substring(0,3).toUpperCase());
 console.log(s.split(', '));
+
+/* multi-line comment
+that continues on and on
+*/
