@@ -122,3 +122,14 @@ while(i<=10) {
     console.log(`While loop number: ${i}`);
     i++;
 }
+
+
+// looping through arrays
+
+for(let i=0; i<=todos.length; i++){
+    console.log(todos[i]);
+};
+
+for(let todo of todos){
+    console.log(`${todo.id}. ${todo.text}`);
+}
