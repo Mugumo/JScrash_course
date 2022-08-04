@@ -108,5 +108,9 @@ console.log(todos[1]);
 const jsonTodos = JSON.stringify(todos);
 console.log(jsonTodos);
 
+// for 
 
+for(let i=0; i<=11; i++){
+    console.log(i);
+};
 
