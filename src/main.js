@@ -51,3 +51,30 @@ fruits.pop();
 console.log(fruits);
 
 console.log(Array.isArray(fruits));
+
+
+//object literals
+
+const person ={
+    firstName : 'John',
+    lastName : 'Doe',
+    age : 30,
+    hobbies : ['music', 'art', 'languages', 'tech'],
+    details : {
+        height : '6ft 0in',
+        weight : '80kg',
+        skin_colour : 'Brown'
+    }
+}
+
+console.log(person);
+
+console.log(person.hobbies[1]);
+
+console.log(`${f_name}'s height is ${person.details.height}`);
+
+//destructuring object literals
+
+const {firstName, lastName} = person;
+
+console.log(firstName, lastName);
