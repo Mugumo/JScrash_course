@@ -78,3 +78,35 @@ console.log(`${f_name}'s height is ${person.details.height}`);
 const {firstName, lastName} = person;
 
 console.log(firstName, lastName);
+
+//arrays of objects
+
+const todos = [
+    {
+        id:1,
+        text:'Buy cashew milk for Mary.',
+        isCompleted: true
+    },
+    {
+        id:2,
+        text:'Lunch with Grace.',
+        isCompleted: true
+
+    },
+    {
+        id:3,
+        text:'3km run.',
+        isCompleted: false
+
+    }
+];
+
+console.log(todos[1]);
+
+// json stringify
+
+const jsonTodos = JSON.stringify(todos);
+console.log(jsonTodos);
+
+
+
