@@ -114,3 +114,11 @@ for(let i=0; i<=11; i++){
     console.log(i);
 };
 
+// while
+
+let i = 0;
+
+while(i<=10) {
+    console.log(`While loop number: ${i}`);
+    i++;
+}
