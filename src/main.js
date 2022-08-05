@@ -133,3 +133,33 @@ for(let i=0; i<=todos.length; i++){
 for(let todo of todos){
     console.log(`${todo.id}. ${todo.text}`);
 }
+
+//high order array methods
+
+// for each, map, filter
+
+todos.forEach(function(todo){
+    console.log(todo.text);
+})
+
+const todoText = todos.map(function(todo){
+    return todo.text;
+})
+
+console.log('bananas');
+console.log(todoText);
+
+const completedTodos = todos.filter(function(todo){
+    return todo.isCompleted === true;
+
+})
+
+console.log(completedTodos);
+
+const completedTextTodos = todos.filter(function(todo){
+    return todo.isCompleted === true;
+}).map(function(todo){
+    return todo.text;
+})
+
+console.log(completedTextTodos);
