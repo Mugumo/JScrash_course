@@ -163,3 +163,34 @@ const completedTextTodos = todos.filter(function(todo){
 })
 
 console.log(completedTextTodos);
+
+// conditionals
+
+//if else
+const x = 11;
+
+if (x===10){
+    console.log(`x is 10`);
+} else if (x >10){
+    console.log(`x is greater than 10`);
+} 
+else {
+    console.log(`x is not 10`);
+}
+
+// conditional or ||, and &&
+
+const a = 4;
+const b = 10;
+
+if (a>5 || b<10){
+    console.log('This is the truth')
+}
+else if (a === 4 && b === 10){
+    console.log('a lucky draw!');
+}
+else {
+    console.log('LIAR');
+}
+
+// ternary operator
