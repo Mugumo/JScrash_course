@@ -194,3 +194,18 @@ else {
 }
 
 // ternary operator
+
+const l = 13;
+const color = l > 10 ? 'red' : 'blue';
+console.log(color);
+
+switch(color){
+    case 'red' : 
+        console.log(` color is red`);
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('I do not see no colour here');
+}
