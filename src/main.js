@@ -90,4 +90,9 @@ console.log(colors);
 
 console.log(traffic);
 
+//passing rest arguments 
+let myFunc = {
+    showArgs : (...args) => console.log(args)
+    };
+myFunc.showArgs(1,2,3,4,5);
 
