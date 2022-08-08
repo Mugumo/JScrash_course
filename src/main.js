@@ -22,7 +22,6 @@ console.log(subtractNums(8, 3));
 const concatLetters = (m,n) => `${m}.${n}`;
 
 const multiplyNums = (x,y) =>{
-
     product = x*y;
     console.log(product);
     console.log("and apparently something else too");
@@ -59,15 +58,15 @@ todos.forEach(todo => {
     console.log(todo.text)
 });
 
-const car = [
+const cars = [
     {
         number:'KCL700A',
         color: 'green',
-        sound: 'vroom'
+        sound: 'honk'
     },
     {
         number:'KAD608T',
-        color: 'BLUE',
+        color: 'blue',
         sound: 'vroom'
     },
     {
@@ -76,3 +75,19 @@ const car = [
         sound: 'vroom'
     }
 ]
+
+// high order array functions practice
+
+for(let car of cars){
+    console.log(car.number);
+}
+
+cars.forEach((car) => console.log(car.sound));
+const colors = cars.map((car)=>car.color);
+const traffic = cars.filter((car) => car.sound === 'vroom').map((car) => car.number)
+
+console.log(colors);
+
+console.log(traffic);
+
+
