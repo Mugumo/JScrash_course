@@ -1,45 +1,13 @@
-// object oriented programming
+//DOM
 
-// constructor functions
+const form = document.getElementById('my-form');
 
-function Person(first_name,last_name,dob){
-    this.first_name = first_name;
-    this.last_name = last_name;
-    this.dob = new Date(dob);
+console.log(form);
 
-    this.getBirthyear = () => this.dob.getFullYear();
+//single selector
+console.log(document.querySelector('.container'));
 
-    
-}
+//iterative selector
+const items = document.querySelectorAll('.item');
 
-Person.prototype.getFullName = function() {return `${this.first_name} ${this.last_name}`;}
-
-
-john = new Person('John','Doe','12-02-1992'); 
-console.log(john);
-
-frank = new Person('Frank', 'DiCaprio', '3-6-1978');
-console.log(frank);
-
-console.log(frank.dob.getFullYear());
-console.log((john.dob))
-
-console.log(john.getBirthyear());
-console.log(john.getFullName());
-
-
-// classes
-
-class Car {
-    constructor(license, weight, color){
-        this.license = license;
-        this.weight = weight;
-        this.color = color;
-    }
-
-    getWeight = () => `${this.weight} tonnes`;
-}
-
-prado = new Car('KBX 430T','1.3','white');
-
-console.log(prado.getWeight());
+items.forEach(item => console.log(item));
