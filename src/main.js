@@ -1,50 +1,29 @@
-//DOM
-
-const form = document.getElementById('my-form');
-
-console.log(form);
-
-//single selector
-console.log(document.querySelector('.container'));
-
-//iterative selector
-const items = document.querySelectorAll('.item');
-
-items.forEach(item => console.log(item));
+const myForm = document.querySelector('#my-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const msg = document.querySelector('.msg');
+const userList = document.querySelector('#users');
 
 
+myForm.addEventListener('submit', onSubmit);
 
-// manipulating DOM
-
-
-// change content of item on list
-
-const ul = document.querySelector('.items');
-
-ul.children[1].textContent = 'Hello';
-ul.children[2].innerText = 'Brad';
-ul.children[0].innerHTML = '<h1>LOUD</h1>';
-
-//altering style
-
-const btn =  document.querySelector('.btn');
-btn.style.background = 'red';
-
-// event listener on button
-
-btn.addEventListener('click', (e) => {
+function onSubmit(e){
     e.preventDefault();
-    // document.querySelector('#my-form').style.background = '#ccc';
-    // document.querySelector('body').classList.add('bg-dark');
+    if(nameInput.value === '' || emailInput.value === ''){
+        msg.classList.add(('error'));
+        msg.textContent = "Please enter all fields";
 
-    document.querySelector('.items').children[1].textContent = 'Goodbye';
-    ul.children[2].textContent = 'Fernando';
+        setTimeout(()=>msg.remove(), 2000);
+    }else{
+        const li = document.createElement('li');
+        li.appendChild(
+            document.createTextNode(`${nameInput.value} : ${emailInput.value}`)
+            )
+        userList.appendChild(li);
 
-});
+        //clear fields
 
-ul.addEventListener('mouseover',(e)=>{
-    ul.children[0].innerHTML = '<p><i>Quiet</i></p>';
-});
-ul.addEventListener('mouseout',(e)=>{
-    ul.children[0].innerHTML = '<h1>LOUD</h1>';
-});
+        nameInput.value = '';
+        emailInput.value = '';
+    }
+}
