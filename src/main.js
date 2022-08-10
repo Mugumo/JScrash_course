@@ -9,11 +9,19 @@ myForm.addEventListener('submit', onSubmit);
 
 function onSubmit(e){
     e.preventDefault();
-    if(nameInput.value === '' || emailInput.value === ''){
-        msg.classList.add(('error'));
-        msg.textContent = "Please enter all fields";
-
-        setTimeout(()=>msg.remove(), 2000);
+    if(nameInput.value === '' && emailInput.value === ''){
+        msg.classList.remove('disappearing');
+        msg.classList.add('error');
+        msg.textContent = 'Please enter all fields';
+        setTimeout(()=>{msg.classList.add('disappearing');}, 2000);
+    }else if(nameInput.value === ''){
+        msg.classList.remove('disappearing');
+        msg.textContent = 'Please enter name';
+        setTimeout(()=>{msg.classList.add('disappearing');}, 2000);
+    }else if(emailInput.value === ''){
+        msg.classList.remove('disappearing');
+        msg.textContent = 'Please enter email';
+        setTimeout(()=>{msg.classList.add('disappearing');}, 2000);
     }else{
         const li = document.createElement('li');
         li.appendChild(
