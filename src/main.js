@@ -27,3 +27,19 @@ console.log((john.dob))
 console.log(john.getBirthyear());
 console.log(john.getFullName());
 
+
+// classes
+
+class Car {
+    constructor(license, weight, color){
+        this.license = license;
+        this.weight = weight;
+        this.color = color;
+    }
+
+    getWeight = () => `${this.weight} tonnes`;
+}
+
+prado = new Car('KBX 430T','1.3','white');
+
+console.log(prado.getWeight());
