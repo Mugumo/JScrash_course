@@ -17,9 +17,15 @@ items.forEach(item => console.log(item));
 // manipulating DOM
 
 
-// remove last item on list
+// change content of item on list
 
 const ul = document.querySelector('.items');
 
-ul.lastElementChild.remove();
+ul.children[1].textContent = 'Hello';
+ul.children[2].innerText = 'Brad';
+ul.children[0].innerHTML = '<h1>LOUD</h1>';
 
+//altering style
+
+const btn =  document.querySelector('.btn');
+btn.style.background = 'red';
