@@ -85,10 +85,13 @@ for(let car of cars){
 cars.forEach((car) => console.log(car.sound));
 const colors = cars.map((car)=>car.color);
 const traffic = cars.filter((car) => car.sound === 'vroom').map((car) => car.number)
+const lights = cars.filter((car) => car.sound === 'vroom')
 
 console.log(colors);
 
 console.log(traffic);
+
+console.log(lights);
 
 //passing rest arguments 
 let myFunc = {
