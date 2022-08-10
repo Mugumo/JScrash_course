@@ -17,8 +17,9 @@ items.forEach(item => console.log(item));
 // manipulating DOM
 
 
-//remove entire list
+// remove last item on list
 
 const ul = document.querySelector('.items');
 
-ul.remove();
+ul.lastElementChild.remove();
+
