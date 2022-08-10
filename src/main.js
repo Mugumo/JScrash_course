@@ -29,3 +29,11 @@ ul.children[0].innerHTML = '<h1>LOUD</h1>';
 
 const btn =  document.querySelector('.btn');
 btn.style.background = 'red';
+
+// event listener to change style
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#my-form').style.background = '#ccc';
+    document.querySelector('body').classList.add('bg-dark');
+});
