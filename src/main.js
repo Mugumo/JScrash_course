@@ -11,3 +11,14 @@ console.log(document.querySelector('.container'));
 const items = document.querySelectorAll('.item');
 
 items.forEach(item => console.log(item));
+
+
+
+// manipulating DOM
+
+
+//remove entire list
+
+const ul = document.querySelector('.items');
+
+ul.remove();
